@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚽ Ligas</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/ligas.js" defer></script>
+</head>
+<body>
+    <div class="background"></div>
+    <header>
+        <h1>⚽ Gerir Ligas</h1>
+    </header>
+    <main>
+        <!-- Botão para carregar ligas -->
+        <button id="fetchLigas" class="btn">Carregar Ligas</button>
+        <div id="outputLigas"></div>
+
+        <!-- Botão para abrir o modal -->
+        <button id="openModal" class="btn-gold">Criar Liga</button>
+    </main>
+
+    <!-- Modal para criar liga -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h2>Criar Liga</h2>
+            <form id="createLigaForm">
+                <div class="form-group">
+                    <label for="nome">Nome da Liga</label>
+                    <input type="text" id="nome" placeholder="Digite o nome da liga" required />
+                </div>
+                <div class="form-group">
+                    <label for="descricao">Descrição</label>
+                    <textarea id="descricao" placeholder="Digite a descrição da liga" required></textarea>
+                </div>
+                <button type="submit" class="btn">Criar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Loader -->
+    <div id="loader" class="loader" style="display: none;"></div>
+
+    <!-- Mensagem de feedback -->
+    <div id="feedback" class="feedback" style="display: none;"></div>
+</body>
+</html>

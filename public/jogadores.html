@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚽ Jogadores do Clube</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>⚽ Jogadores</h1>
+        <p id="clube-nome">Carregando...</p>
+        <button id="showAddForm" class="btn-gold">Adicionar Jogador</button>
+    </header>
+    
+    <!-- Formulário para adicionar ou editar jogador -->
+    <section id="playerFormSection" style="display: none;">
+        <h2 id="formTitle">Adicionar Jogador</h2>
+        <form id="playerForm">
+            <div class="form-group">
+                <label for="player-name">Nome do Jogador</label>
+                <input type="text" id="player-name" required />
+            </div>
+            <div class="form-group">
+                <label for="player-position">Posição</label>
+                <select id="player-position" required>
+                    <option value="Guarda-Redes">Guarda-Redes</option>
+                    <option value="Defesa">Defesa</option>
+                    <option value="Médio">Médio</option>
+                    <option value="Avançado">Avançado</option>
+                </select>
+            </div>
+            <input type="hidden" id="player-id" />
+            <button type="submit" class="btn">Guardar</button>
+            <button type="button" id="cancelForm" class="btn">Cancelar</button>
+        </form>
+    </section>
+    
+    <main>
+        <div id="jogadores-container" class="jogadores-grid"></div>
+    </main>
+    
+    <footer>
+        <button id="voltar" class="btn">⬅ Voltar</button>
+    </footer>
+    
+    
+
+    <main>
+        <div id="jogadores-container" class="jogadores-grid"></div>
+    </main>
+    
+
+    <script src="js/jogadores.js"></script>
+</body>
+</html>

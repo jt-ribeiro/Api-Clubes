@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚽ Clubes da Liga</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header>
+        <h1>⚽ Clubes</h1>
+        <p id="liga-nome">Carregando...</p>
+        <button id="showAddForm" class="btn-gold">Adicionar Clube</button>
+    </header>
+    
+    <!-- Formulário para adicionar ou editar clubes -->
+    <section id="clubFormSection" class="form-section" style="display: none;">
+        <h2 id="formTitle" class="form-title">Adicionar Clube</h2>
+        <form id="clubForm" class="styled-form">
+            <div class="form-group">
+                <label for="club-name">Nome do Clube</label>
+                <input type="text" id="club-name" placeholder="Digite o nome do clube" required />
+            </div>
+            <div class="form-group">
+                <label for="club-location">Localização</label>
+                <input type="text" id="club-location" placeholder="Digite a localização" required />
+            </div>
+            <input type="hidden" id="club-id" />
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Guardar</button>
+                <button type="button" id="cancelForm" class="btn btn-secondary">Cancelar</button>
+            </div>
+        </form>
+    </section>
+    
+    <main>
+        <div id="clubes-container" class="clubes-grid"></div>
+    </main>
+    
+    <footer>
+        <button id="voltar" class="btn">⬅ Voltar</button>
+    </footer>
+    
+    <script src="js/clubes.js"></script>
+</body>
+</html>
+
